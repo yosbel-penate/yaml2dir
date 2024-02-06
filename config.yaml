@@ -1,0 +1,43 @@
+project_structure:
+  src:
+    application:
+      use_cases:
+        - registerUser.ts
+        - authenticateUser.ts
+      services:
+        - userService.ts
+    domain:
+      entities:
+        - user.ts
+      repositories:
+        - userRepository.ts
+      services:
+        - userDomainService.ts
+    infrastructure:
+      adapters:
+        - userRepositoryAdapter.ts
+      controllers:
+        - userController.ts
+      databases:
+        - database.ts
+  test:
+    application:
+      use_cases:
+        - registerUser.spec.ts
+        - authenticateUser.spec.ts
+      services:
+        - userService.spec.ts
+    domain:
+      entities:
+        - user.spec.ts
+      repositories:
+        - userRepository.spec.ts
+      services:
+        - userDomainService.spec.ts
+    infrastructure:
+      adapters:
+        - userRepositoryAdapter.spec.ts
+      controllers:
+        - userController.spec.ts
+      databases:
+        - database.spec.ts
